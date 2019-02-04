@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ver preço</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta charset="utf-8">
+</head>
+
+<style>
+    *{
+        font-family: segoe ui;
+    }
+     
+    label{
+        display: table;
+        padding: 10px;
+    }
+     
+    input{
+        padding: 5px;
+    }
+     
+    input[type="text"]{
+        max-width:400px;
+        width:100%;
+    }
+</style>
+ 
+ <body>
+    <div class="container">
+		<div class="row">
+			<div class="col-xg-4 col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border:solid 1px #fc0;margin-top:10px;margin-bottom:10px;">
+				<br>
+				<form id="form-submit" method="" action="">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1">Código da ação</span>
+						</div>
+						<input type="text" class="form-control" placeholder="Digite o código da ação" id="txtCodigo" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+				</form>
+					<!-- <label>Código da ação: <input type="text" id="txtCodigo"></label> -->
+					
+					<input class="alert alert-secondary" id="txtPreco" placeholder="preço da ação hoje" role="alert" disabled></input> <br>
+					<input class="alert alert-secondary" id="txtPreco1" placeholder="preço da ação ontem" role="alert" disabled></input><br>
+					<input class="alert alert-secondary" id="txtPreco2" placeholder="preço da ação 2 dias atrás" role="alert" disabled></input><br>
+					<input class="alert alert-secondary" id="txtPreco3" placeholder="preço da ação 3 dias atrás" role="alert" disabled></input><br>
+					<input class="alert alert-secondary" id="txtPreco4" placeholder="preço da ação 4 dias atrás" role="alert" disabled></input><br>
+					<input class="alert alert-secondary" id="txtPreco5" placeholder="preço da ação 5 dias atrás" role="alert" disabled></input>
+					<input class="alert alert-secondary" id="txtUltimoPreco" placeholder="preço da ação no mes passado" role="alert" disabled></input>
+				<label> data da primeira cotação <input class="alert alert-warning" id="txtUltimo" placeholder="Data de medição do mes passado" role="alert" disabled></input> </label>
+					<span></span>
+
+			</div>
+
+			
+		</div>
+	</div> 
+	
+
+
+
+ </body>
+ 
+     
+ <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+ <script src="js/script.js"></script>
+ 
+</html>
