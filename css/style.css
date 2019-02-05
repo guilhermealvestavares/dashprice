@@ -1,1 +1,5 @@
-.container-grafico{display:flex;justify-content: center; align-items: center; }
+.container-grafico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
