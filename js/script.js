@@ -10,19 +10,73 @@ $(document).ready(function(){
                 dataType : "json",
                 success : function(data){
                 
+ 
                     $("#txtPreco").val(Object.entries(data['Time Series (15min)']).shift()[1]['2. high']);
                     $("#txtUltimoPreco").val(Object.entries(data['Time Series (15min)']).pop()[1]['2. high']);
                     $("#txtUltimo").val(Object.entries(data['Time Series (15min)']).pop()[0]);
-
 
                     var options = {year: 'numeric', month: 'short', day: 'numeric' };
                     var ultimoData = new Date(Object.entries(data['Time Series (15min)']).pop()[0]).toLocaleDateString('pt-BR', options);
                     var dataHoje = new Date(Object.entries(data['Time Series (15min)']).shift()[0]).toLocaleDateString('pt-BR', options);
             
-
+                    // comparação de campos
 
                     var precoAtual = document.getElementById("txtPreco").value;
+                    var preco1 = document.getElementById("txtPreco1").value;
+                    var preco2 = document.getElementById("txtPreco2").value;
+                    var preco3 = document.getElementById("txtPreco3").value;
+                    var preco4 = document.getElementById("txtPreco4").value;
+                    var preco5 = document.getElementById("txtPreco5").value;
                     var precoUltimo = document.getElementById("txtUltimoPreco").value;
+
+                    if(precoAtual > preco1){  
+                    document.getElementById('txtPreco').style.backgroundColor ='#2ecc71';  // verde
+                    }else if(precoAtual == preco1){
+                    document.getElementById('txtPreco').style.backgroundColor ='#3498db'; // azul
+                    }else{
+                    document.getElementById('txtPreco').style.backgroundColor ='#e74c3c'; // vermelho
+                    }
+
+                    if(preco1 > preco2){  
+                    document.getElementById('txtPreco1').style.backgroundColor ='#2ecc71';  // verde
+                    }else if(preco1 == preco2){
+                    document.getElementById('txtPreco1').style.backgroundColor ='#3498db'; // azul
+                    }else{
+                    document.getElementById('txtPreco1').style.backgroundColor ='#e74c3c'; // vermelho
+                    }
+
+                    if(preco2 > preco3){  
+                    document.getElementById('txtPreco2').style.backgroundColor ='#2ecc71';  // verde
+                    }else if(preco2 == preco3){
+                    document.getElementById('txtPreco2').style.backgroundColor ='#3498db'; // azul
+                    }else{
+                    document.getElementById('txtPreco2').style.backgroundColor ='#e74c3c'; // vermelho
+                    }
+
+                    if(preco3 > preco4){  
+                    document.getElementById('txtPreco3').style.backgroundColor ='#2ecc71';  // verde
+                    }else if(preco3 == preco4){
+                    document.getElementById('txtPreco3').style.backgroundColor ='#3498db'; // azul
+                    }else{
+                    document.getElementById('txtPreco3').style.backgroundColor ='#e74c3c'; // vermelho
+                    }
+
+                    if(preco4 > preco5){  
+                    document.getElementById('txtPreco4').style.backgroundColor ='#2ecc71';  // verde
+                    }else if(preco3 == preco4){
+                    document.getElementById('txtPreco4').style.backgroundColor ='#3498db'; // azul
+                    }else{
+                    document.getElementById('txtPreco4').style.backgroundColor ='#e74c3c'; // vermelho
+                    }
+
+                    if(preco5 > precoUltimo){  
+                        document.getElementById('txtPreco5').style.backgroundColor ='#2ecc71';  // verde
+                        }else if(preco3 == precoUltimo){
+                        document.getElementById('txtPreco5').style.backgroundColor ='#3498db'; // azul
+                        }else{
+                        document.getElementById('txtPreco5').style.backgroundColor ='#e74c3c'; // vermelho
+                        }
+
 
 
 
@@ -130,6 +184,11 @@ var config = {
 
 
 });
+
+
+
+
+
 
 
 

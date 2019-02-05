@@ -1,6 +1,20 @@
+$cor-principal:#4cd137;
 
+body{
+  
+}
 .container-grafico{
 display:flex;
 justify-content: center;
 align-items: center;
 }
+
+#myChart{
+    width:100%;
+}
+
+.title{
+    background-color:$cor-principal;
+    width:100%;
+    height:20px;
+    }

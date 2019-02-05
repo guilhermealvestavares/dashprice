@@ -1,5 +1,12 @@
 .container-grafico {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
+
+#myChart {
+  width: 100%; }
+
+.title {
+  background-color: #4cd137;
+  width: 100%;
+  height: 20px; }
