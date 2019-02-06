@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ver preço</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>Quer ficar milionário? Pergunte-me como!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -20,8 +19,6 @@
                         <input type="text" class="form-control" placeholder="Digite o código da ação" id="txtCodigo" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                 </form>
-                <!-- <label>Código da ação: <input type="text" id="txtCodigo"></label> -->
-
                 <input class="alert alert-secondary" id="txtPreco" placeholder="preço da ação hoje" role="alert" disabled>  </input> <br>
                 <input class="alert alert-secondary" id="txtPreco1" placeholder="preço da ação ontem" role="alert" disabled></input><br>
                 <input class="alert alert-secondary" id="txtPreco2" placeholder="preço da ação 2 dias atrás" role="alert" disabled></input><br>
@@ -30,17 +27,13 @@
                 <input class="alert alert-secondary" id="txtPreco5" placeholder="preço da ação 5 dias atrás" role="alert" disabled></input><br>
                 <input class="alert alert-secondary" id="txtUltimoPreco" placeholder="preço da ação no mes passado" role="alert" disabled></input>
             </div>
-
-            <div class="col-12" style="border:solid 1px #fc0;margin-top:10px;margin-bottom:10px;">
+            <div class="col-lg-9 col-12" style="border:solid 1px #fc0;margin-top:10px;margin-bottom:10px;">
                 <canvas id="myChart"> </canvas>
             </div>
         </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/Chart.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/style.js"></script>
 </body>
 </html>
