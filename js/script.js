@@ -4,10 +4,10 @@ $(document).ready(function(){
     const config = {
         type: 'line',
         data: {
-            labels: ["Hoje", "Ontem" , "Três dias Atrás", "Quatro dias atrás", "Cinco dias Atrás"],
+            labels: ["Ultima data captada","Cinco dias atrás","Quatro dias atrás" ,"Três dias atrás" , "Dois dias atrás", "Um dias atrás", "Hoje"],
             datasets: [{
                 label: 'Preço da Ação',
-                data: [0,0,0,0,0],
+                data: [0,0,0,0,0,0,0],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -73,8 +73,8 @@ $(document).ready(function(){
         return convertArrayToObject(firstArray);
     };
     
-    const getPastFiveArray = array => {
-        let pastFiveArray = array.filter((item, index) => index < 5);
+    const getPastArray = array => {
+        let pastFiveArray = array.filter((item, index) => index < 6);
         let pastFiveArrayToObject = pastFiveArray.map(item => convertArrayToObject(item));
 
         return pastFiveArrayToObject;
@@ -98,6 +98,7 @@ $(document).ready(function(){
         return Object.entries(valueDateConvertion);
     }
     
+
     // const valueVariationsArray = convertVariationObjectToArray(valueVariationsObject);
     
     $("#form-submit").on("submit", function(e){
@@ -110,27 +111,52 @@ $(document).ready(function(){
             type : "get",
             dataType : "json",
             success : function(data){
-                // $("#txtPreco").val(Object.entries(data['Time Series (15min)']).shift()[1]['2. high']);
-                // $("#txtUltimoPreco").val(Object.entries(data['Time Series (15min)']).pop()[1]['2. high']);
-                // $("#txtUltimo").val(Object.entries(data['Time Series (15min)']).pop()[0]);
-
-                // var options = {year: 'numeric', month: 'short', day: 'numeric' };
-                // var ultimoData = new Date(Object.entries(data['Time Series (15min)']).pop()[0]).toLocaleDateString('pt-BR', options);
-                // var dataHoje = new Date(Object.entries(data['Time Series (15min)']).shift()[0]).toLocaleDateString('pt-BR', options);
+            
+                var options = {year: 'numeric', month: 'short', day: 'numeric' };
+                var ultimoData = new Date(Object.entries(data['Time Series (15min)']).pop()[0]).toLocaleDateString('pt-BR', options);
+                var dataHoje = new Date(Object.entries(data['Time Series (15min)']).shift()[0]).toLocaleDateString('pt-BR', options);
 
                 const variationObject = convertVariationObjectToArray(Object.entries(data['Time Series (15min)']));
+               
+                $("#txtPreco").val(getFirstArray(variationObject).entries[0].entries["2. high"]);
+                $("#txtPreco1").val(getPastArray(variationObject)[1].entries[0].entries["2. high"]);
+                $("#txtPreco2").val(getPastArray(variationObject)[2].entries[0].entries["2. high"]);
+                $("#txtPreco3").val(getPastArray(variationObject)[3].entries[0].entries["2. high"]);
+                $("#txtPreco4").val(getPastArray(variationObject)[4].entries[0].entries["2. high"]);
+                $("#txtPreco5").val(getPastArray(variationObject)[5].entries[0].entries["2. high"]);
+                
+               
+                $("#txtUltimoPreco").val(Object.entries(data['Time Series (15min)']).pop()[1]['2. high']);
+                $("#txtUltimo").val(Object.entries(data['Time Series (15min)']).pop()[0]);
+               
+
+                 // Comparação de campos
+                 var precoAtual = document.getElementById("txtPreco").value;
+                 var preco1 = document.getElementById("txtPreco1").value;
+                 var preco2 = document.getElementById("txtPreco2").value;
+                 var preco3 = document.getElementById("txtPreco3").value;
+                 var preco4 = document.getElementById("txtPreco4").value;
+                 var preco5 = document.getElementById("txtPreco5").value;
+                 var precoUltimo = document.getElementById("txtUltimoPreco").value;
+
+                var maiorValor = Math.max(precoAtual, preco1,preco2,preco3,preco4,preco5,precoUltimo);
+                document.getElementById("highest-value").innerHTML = maiorValor;
+
+                var menorValor = Math.min(precoAtual, preco1,preco2,preco3,preco4,preco5,precoUltimo);
+                document.getElementById("lower-value").innerHTML = menorValor;
+
+                var percentLow = (menorValor/precoUltimo);
+                var percentHigh = (maiorValor/precoUltimo);
+                document.getElementById("percent-low").innerHTML = percentLow;
+                document.getElementById("percent-high").innerHTML = percentHigh;
+                 
+
+
 
                 // Atualização de Gráfico
-                updateChart([1,2,5,6,4]);
+                updateChart([precoAtual,preco1,preco2,preco3,preco4,preco5,precoUltimo]);
 
-                // Comparação de campos
-                var precoAtual = document.getElementById("txtPreco").value;
-                var preco1 = document.getElementById("txtPreco1").value;
-                var preco2 = document.getElementById("txtPreco2").value;
-                var preco3 = document.getElementById("txtPreco3").value;
-                var preco4 = document.getElementById("txtPreco4").value;
-                var preco5 = document.getElementById("txtPreco5").value;
-                var precoUltimo = document.getElementById("txtUltimoPreco").value;
+               
 
                 if(precoAtual > preco1){
                 document.getElementById('txtPreco').style.backgroundColor ='#2ecc71';  // verde

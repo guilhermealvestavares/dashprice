@@ -3,13 +3,15 @@
 <head>
     <meta charset="utf-8">
     <title>Quer ficar milionário? Pergunte-me como!</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-xg-3 col-lg-3 col-md-3 col-sm-6 col-xs-12" style="border:solid 1px #fc0;border-bottom:transparent;margin-top:10px;margin-bottom:10px;">
+        <div class="row principal-box">
+            <div class="col-3 shadow max">
                 <br>
                 <form id="form-submit" method="" action="">
                     <div class="input-group mb-3">
@@ -27,9 +29,43 @@
                 <input class="alert alert-secondary" id="txtPreco5" placeholder="preço da ação 5 dias atrás" role="alert" disabled></input><br>
                 <input class="alert alert-secondary" id="txtUltimoPreco" placeholder="preço da ação no mes passado" role="alert" disabled></input>
             </div>
-            <div class="col-lg-9 col-12" style="border:solid 1px #fc0;margin-top:10px;margin-bottom:10px;">
+            <div class="col-8 offset-1">
                 <canvas id="myChart"> </canvas>
             </div>
+        </div>
+
+        <div class="row box-info">
+            <div class="col-6">
+                <div class="shadow max-box">
+                    <div class="max-topo">
+                        <p class="title-max-topo">Maior preço no período</p>
+                    </div>
+                    <div class="max-flex"> 
+                        <p> R$  <span id="highest-value">0,00</span> </p>
+                        <i class="fas fa-arrow-up top"></i>
+                    </div>
+                    <div class="percent-high text-center">
+                        <p>+ <span id="percent-high"> 0.0</span>%</p>
+                    </div>
+                    
+                </div>
+             </div>
+
+             <div class="col-6">
+                <div class="shadow max-box">
+                    <div class="max-topo down">
+                        <p class="title-max-topo down">Menor preço no período</p>
+                    </div>
+                    <div class="max-flex"> 
+                        <p> R$  <span id="lower-value">0,00</span> </p>
+                        <i class="fas fa-arrow-down top"></i>
+                    </div>
+                    <div class="percent-low text-center">
+                        <p style="color:red;">- <span id="percent-low" > 0.0<span>%</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

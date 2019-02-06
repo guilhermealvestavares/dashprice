@@ -1,7 +1,17 @@
+*{font-family: 'Questrial', sans-serif;}
+
 .container-grafico {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+  .principal-box{
+    margin-top:40px;
+  }
+
+  .shadow{
+   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
+  }
 
 #myChart {
   width: 100%; }
@@ -10,3 +20,42 @@
   background-color: #4cd137;
   width: 100%;
   height: 20px; }
+
+  .alert{
+    height:10px;
+  }
+
+  .box-info{margin-top:50px;}
+
+  .max-box{
+    height:300px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    font-size:2em;
+  }
+
+  .max-topo{display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:20px;
+  padding-bottom:20px;
+  background-color:#2ecc71;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  }
+  .max-topo.down{background-color:#e74c3c}
+
+  .title-max-topo{color:#ffffff;}
+
+  .max-flex{
+    display:flex;
+  justify-content: center;
+  align-items: center;
+  height:120px;
+  font-size:36pt;
+  }
+
+  .top{font-size:24pt;margin-left:30px;}
+
+  .percent-high{color:#2ecc71};
+  #percent-low{color:red};
