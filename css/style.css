@@ -1,9 +1,12 @@
 *{font-family: 'Questrial', sans-serif;}
 
+body{background-color:#ecf0f1;}
 .container-grafico {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+
 
   .principal-box{
     margin-top:40px;

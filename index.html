@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Dashprice | Home</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -21,15 +22,15 @@
                         <input type="text" class="form-control" placeholder="Digite o código da ação" id="txtCodigo" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                 </form>
-                <input class="alert alert-secondary" id="txtPreco" placeholder="preço da ação hoje" role="alert" disabled>  </input> <br>
-                <input class="alert alert-secondary" id="txtPreco1" placeholder="preço da ação ontem" role="alert" disabled></input><br>
-                <input class="alert alert-secondary" id="txtPreco2" placeholder="preço da ação 2 dias atrás" role="alert" disabled></input><br>
-                <input class="alert alert-secondary" id="txtPreco3" placeholder="preço da ação 3 dias atrás" role="alert" disabled></input><br>
-                <input class="alert alert-secondary" id="txtPreco4" placeholder="preço da ação 4 dias atrás" role="alert" disabled></input><br>
-                <input class="alert alert-secondary" id="txtPreco5" placeholder="preço da ação 5 dias atrás" role="alert" disabled></input><br>
-                <input class="alert alert-secondary" id="txtUltimoPreco" placeholder="preço da ação no mes passado" role="alert" disabled></input>
+                <label>preco da ação hoje<input class="alert alert-secondary" id="txtPreco" placeholder="preço da ação hoje" role="alert" disabled>  </input></label> <br>
+                <label>preco da ação um dia atrás  <input class="alert alert-secondary" id="txtPreco1" placeholder="preço da ação ontem" role="alert" disabled></input><br>
+                <label>preco da ação dois dias atrás  <input class="alert alert-secondary" id="txtPreco2" placeholder="preço da ação 2 dias atrás" role="alert" disabled></input><br>
+                <label>preco da ação três dias atrás<input class="alert alert-secondary" id="txtPreco3" placeholder="preço da ação 3 dias atrás" role="alert" disabled></input><br>
+                <label>preco da ação quatro dias atrás<input class="alert alert-secondary" id="txtPreco4" placeholder="preço da ação 4 dias atrás" role="alert" disabled></input><br>
+                <label>preco da ação cinco dias atrás<input class="alert alert-secondary" id="txtPreco5" placeholder="preço da ação 5 dias atrás" role="alert" disabled></input><br>
+                    <label>preco da ação na ultima vez capturado<input class="alert alert-secondary" id="txtUltimoPreco" placeholder="preço da ação no mes passado" role="alert" disabled></input>
             </div>
-            <div class="col-8 offset-1">
+            <div class="col-8 offset-1 container-grafico">
                 <canvas id="myChart"> </canvas>
             </div>
         </div>
@@ -71,5 +72,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/Chart.js"></script>
     <script src="js/script.js"></script>
+   <!-- <script src="js/auto-complete.js"></script> -->
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <link rel="stylesheet" href="/resources/demos/style.css">
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+   
 </body>
 </html>

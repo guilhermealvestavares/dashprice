@@ -147,8 +147,19 @@ $(document).ready(function(){
 
                 var percentLow = (menorValor/precoUltimo);
                 var percentHigh = (maiorValor/precoUltimo);
-                document.getElementById("percent-low").innerHTML = percentLow;
-                document.getElementById("percent-high").innerHTML = percentHigh;
+                if(percentLow != 1){
+                 document.getElementById("percent-low").innerHTML = percentLow;
+                }else{
+                    document.getElementById("percent-low").innerHTML = "Mesmo valor que o último captado";
+                }
+
+                if(percentHigh != 1){
+                    document.getElementById("percent-high").innerHTML = percentHigh;
+                   }else{
+                    document.getElementById("percent-high").innerHTML = "Mesmo valor que o último captado";
+                   }
+                
+               
                  
 
 
