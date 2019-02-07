@@ -62,3 +62,9 @@ body{background-color:#ecf0f1;}
 
   .percent-high{color:#2ecc71};
   #percent-low{color:red};
+
+  .dash-footer{
+    width:200px;
+    height:100px;
+    background-color:#fc0;
+  }
