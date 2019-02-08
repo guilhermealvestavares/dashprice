@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+        <div style="width:100%;height: 10px;background-color:red;margin-bottom:30px;">
+          
+            </div>
     <div class="container">
         <div class="row principal-box">
-            <div class="col-3 shadow max">
+            <div class="col-lg-3 col-xg-3 col-md-12 col-sm-12 col-xs-12 shadow max">
                 <br>
                 <form id="form-submit" method="" action="">
                     <div class="input-group mb-3">
@@ -30,7 +33,8 @@
                 <label>preco da ação cinco dias atrás<input class="alert alert-secondary" id="txtPreco5" placeholder="preço da ação 5 dias atrás" role="alert" disabled></input><br>
                     <label>preco da ação na ultima vez capturado<input class="alert alert-secondary" id="txtUltimoPreco" placeholder="preço da ação no mes passado" role="alert" disabled></input>
             </div>
-            <div class="col-8 offset-1 container-grafico">
+            <br><br>
+            <div class="col-lg-8 col-xg-8 col-md-12 col-sm-12 col-xs-12 offset-1 container-grafico">
                 <canvas id="myChart"> </canvas>
             </div>
         </div>
