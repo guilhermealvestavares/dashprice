@@ -174,7 +174,7 @@ $(document).ready(function(){
 
 
                 // Atualização de Gráfico
-                updateChart([precoAtual,preco1,preco2,preco3,preco4,preco5,precoUltimo]);
+                updateChart([precoUltimo,preco1,preco2,preco3,preco4,preco5,precoAtual]);
 
                
 
